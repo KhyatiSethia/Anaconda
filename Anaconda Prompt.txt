@@ -1,0 +1,40 @@
+# Run these commands on Anaconda Prompt
+
+###################################################################################################################################
+############################################# To create or delete environments in Anaconda Distribution
+
+# List of Kernels
+jupyter kernelspec list
+
+# Remove Kernel
+jupyter kernelspec uninstall unwanted-kernel
+
+# Check list and Delete Environment
+conda env list
+conda env remove -n ENV_NAME
+
+# Create & Activate Environment
+conda create -n gpuenv python=3.7
+conda activate gpuenv
+
+# Installing a python kernel for the environment
+pip install ipykernel
+python -m ipykernel install --user --name gpuenv --display-name "gpuenv"
+
+# Install Tensorflow-GPU
+conda install tensorflow-gpu
+
+pip install keras
+
+# Jupyter Notebook Setup
+conda install jupyter
+jupyter notebook
+
+# In Jupyter Notebook do the following
+# New -> select the created kernel
+# Check following: Kernel -> change kernel
+
+# Reference
+1. https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+###################################################################################################################################
